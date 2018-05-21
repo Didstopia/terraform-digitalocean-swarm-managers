@@ -21,11 +21,11 @@ output "worker_token" {
 }
 
 output "droplet_ids" {
-  value       = ["${digitalocean_droplet.node.*.id}"]
+  value       = ["${digitalocean_droplet.manager.*.id}"]
   description = "The droplet ids"
 }
 
 output "droplet_hostnames" {
-  value       = ["${digitalocean_droplet.node.*.name}"]
+  value       = ["${digitalocean_droplet.manager.*.name}"]
   description = "The droplet names"
 }
